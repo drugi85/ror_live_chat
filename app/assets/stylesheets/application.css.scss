@@ -1,0 +1,177 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ * 
+ *= require reset
+ **= require_self
+ */
+
+/***Misc Tags***/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: #fff url('bodybg.png') repeat-x;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+a img {
+  border: 0px;
+}
+a {
+  text-decoration: none;
+}
+.hidden {
+  text-indent: -9000px;
+  background: inherit;
+}
+/***Header/logo tags***/
+
+#header {
+  width: 850px;
+  margin: 0 auto;
+  height: 180px;
+  border-top: 1px solid #000;
+}
+#logo {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 250px;
+}
+#logo h1, #logo h2 {
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+#logo h1 {
+  font-size: 2.4em;
+  padding-top: 10px;
+  color: #F58220;
+}
+#logo h2 {
+  font-size: 1.3em;
+  color: #a0a0a0;
+}
+#topnav {
+  margin-top: 105px;
+  margin-left: 300px
+}
+#topnav a {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 95px;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  background-image: asset-url('tab.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+#topnav a:hover {
+  background-image: url('tab.png');
+  color: #000;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+input, select {
+  display: block;
+}
+#topnav .active {
+  background-image: url('tab.png');
+  color: #000;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.menu {
+  // position: relative;
+  top: 50px;
+  margin-bottom: 30px;
+}
+.menu2 {
+  position: relative;
+  bottom: 30px;
+}
+.select {
+  margin-top: 30px;
+}
+.submit {
+  margin-top: 30px;
+}
+.button_submit {
+  position: relative;
+  left: 250px;
+  bottom: 40 px;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 20px;
+  padding-left: 10px;
+  position: relative;
+  background-color: rgb(41, 127, 184);
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+}
+#uservalid {
+  width: 172px !important;
+  //position: relative;
+  //bottom: 75px;
+}
+#emailvalid {
+  width: 172px !important;
+  // position: relative;
+  //bottom: 75px;
+}
+.chat_form {
+  width: 400px;
+}
+ul.chat_list {
+  list-style-type: none;
+}
+ul.chat_list li {
+  margin-bottom: 3px;
+}
+#form {
+  float: left;
+}
+#flash {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  .message {
+    padding: 0;
+    background-image: none;
+ }
+ .flash_notice {
+   position: relative;
+   background-color: #ABBB30;
+   border-color: #6F7B13;
+}
+.flash_alert {
+  position: relative;
+  background-color: #F24A4A;
+  border-color: #A90A2C;
+}
+}
+.section-left {
+  width: 60%;
+}
+.validation_error{
+  color:red;
+  font-weight: bold;
+}

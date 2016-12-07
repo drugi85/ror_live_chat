@@ -1,0 +1,23 @@
+<p class="label">
+	To start communication,please,provide following data:
+</p>
+<%= form_for(@user, url:  go_to_chat_path, method: "post") do |f| %>
+<div class="menu">
+	<%=f.text_field(:username, :value => nil ,:placeholder => "username") %>
+	<span id="uservalid" style="display:none"></span>
+	<%= show_model_attr_error(@user, "username") %>
+</div>
+
+<div class="menu">
+	<%= f.text_field(:email, :value => nil ,  :placeholder => "email") %>
+	<span id="emailvalid" style="display:none;"></span>
+	<%= show_model_attr_error(@user, "email") %>
+</div>
+
+<%= f.select(:role_id, options_for_select([
+	['User', Role::USER_ID], ['Employee', Role::EMPLOYEE_ID]], Role::USER_ID ), :class => "select") %>
+	<%= show_model_attr_error(@user, "role_id") %>
+	<%= submit_tag("Submit", :class => "submit", :id => "button") %>
+	<% end %>
+
+

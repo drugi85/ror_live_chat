@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag    'css_chat_page', media: 'all', 'data-turbolinks-track' => true %>
+
+<div class="align-left">
+  <%= render :partial => "users/chat_list" %>
+  <form  action="javascript:void(0)" method="post" class="chat_form">
+    <span id="chat_error" style="display:none;"></span>
+    <input type="hidden" id="chat_user_id" value="<%= @user.id %>">
+    <textarea placeholder="Your message here"rows="4" cols="25" id="textarea" class='textarea'> </textarea>
+    <div class="container">
+      <input type="submit" name="Send" class="button_submit " id="sendchatpage" />
+    </div>
+  </form>
+</div>
+<div class="align-right">
+  <div class="aligncenter">
+    <p><b><h2>Evaluate work of our employee</h2></b></p>
+    <br><p>We are interested in improving of our company</p>
+  </div>
+  <div class="section section-right">
+   <%= image_tag "femeie.jpg", :class =>"user_photo" %>
+   <p class="paragraph">Lady Dee</p>
+ </div>
+ <div class="section_buttons">
+  <p>Comunnication was:</p>
+  <a href="#" class="left primary button">Pure</a>
+  <a href="#" class="middle button">Normal</a>
+  <a href="#" class="right  button">Great</a>
+</div>
+</div>

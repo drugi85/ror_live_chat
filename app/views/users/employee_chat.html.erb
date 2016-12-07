@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag    'cssemployee', media: 'all', 'data-turbolinks-track' => true %>
+<div class="section section-right">
+
+  <%= render :partial => "users/chat_list" %>
+  <form action="javascript:void(0)" method="post" class="chat_form">
+    <span id="chat_error" style="display:none;"></span>
+   
+    <input type="hidden" id="chat_user_id" value="<%= @user.id %>">
+    <textarea class="mesaj" type="text" id="textarea" > </textarea>
+    <input type="submit" value="Send" class="button_submit " id="sendchatpage" />
+  </form>
+</div>
+<div class="section section-left">
+  <p class="p">You communicate with:</p>
+  <%= image_tag "barbat.jpg", :class => "employee_photo" %>
+  <p class="employee_name">Iepan Ionut</p>
+  <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="mail">Send Mail</a>
+</div>

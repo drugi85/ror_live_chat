@@ -1,0 +1,50 @@
+.fieldset {
+  width: 400px;
+  height: 400px;
+}
+.legend {
+  position: relative;
+}
+.mesaj {
+  margin-top: 30px;
+  border-color: red;
+}
+.submit {
+  margin-top: -150px;
+}
+.p {
+  margin-bottom: 10px;
+}
+.fieldset ul {
+  list-style: none;
+}
+.section {
+  float: left;
+  height: 100%;
+}
+.section-right {
+  position: relative;
+  left: 30px;
+  width: 40%;
+}
+
+.employee_photo {
+  position: relative;
+  top: 20px;
+}
+.employee_name {
+  position: relative;
+  top: 30px;
+}
+.mail {
+  position: relative;
+  top: 40px;
+}
+.button_submit {
+  position: relative;
+  left: 30px;
+  bottom: 10px;
+}
+#textarea1 {
+  display: block;
+}

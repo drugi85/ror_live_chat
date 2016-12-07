@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Start_chat_page</title>
+	<meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
+	<%= stylesheet_link_tag    'application', "reset", media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+		</div>
+		<div id="topnav">
+			<a href="<%= root_path %>" class="active">Home</a>
+			<!--Use class="active" to show where user is-->
+			<a href="#">Chat</a>
+			<a href="#">Help</a>
+			<a href="#">About Us</a>
+		</div>
+	</div>
+	<div id="flash">
+		<% flash.each do |key, value| %>
+		<div class="message flash_<%= key %>"><%= value %></div>
+		<% end %>
+	</div>
+	<%= yield %>
+</body>
+</html>
